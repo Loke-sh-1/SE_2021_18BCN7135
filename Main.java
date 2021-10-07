@@ -1,4 +1,10 @@
+/******************************************************************************
 
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
 import java.util.*;
 public class Main
 {
@@ -27,16 +33,52 @@ public class Main
 		
 		
 		display(a);
-		String s="P1:F";
-		int i=4,j=2;
+		
+		System.out.println("");
+		
+		int c=1;
+		System.out.println("Player1 Input : ");
+		String m="P1:F";
+		int k=4,l=0;
+		String[] m1=m.split(":");
+		String m2="A-"+m1[0];
+		for(int p=0;p<5;p++){
+		    for(int q=0;q<5;q++){
+		        
+		    }
+		}
+	
+		move(c,a,4,0,m);
+		display(a);
+
+		
+	
+	}
+	
+	
+	
+	
+	
+	static void display(String[][] a){
+	    for(int i=0;i<5;i++){
+		    for(int j=0;j<5;j++){
+		        	System.out.print(a[i][j]+" ");
+		    }
+		    System.out.println(" ");
+		}
+	} 
+	
+	static void move(int c,String[][] a,int i,int j,String s){
+	   // String s="P1:F";
+	//	int i=4,j=2;
 		
 		
-	String p="A";	
-if(p=="A")	{	
+	    String p="A";	
+    if(p=="A")	{	
 		
-switch(s){
-		   case "P1:F":a[i-1][j]="A-P1";
-		                a[i][j]=null;break;
+    switch(s){
+		   case "P1:F":if(i-1>=0){a[i-1][j]="A-P1";
+		                a[i][j]=null;}else {System.out.println("Invalid move");}break;
 		  case "P1:B":if(i+1<5){
 		                a[i+1][j]="A-P1";
 		                a[i][j]=null;} else {System.out.println("Invalid move");}break;
@@ -81,19 +123,8 @@ switch(s){
 		                a[i][j]=null;} else {System.out.println("Invalid move");}break;
 		}
 		
-}
-		System.out.println("");
-		display(a);
-	
+    }
 	}
-	static void display(String[][] a){
-	    for(int i=0;i<5;i++){
-		    for(int j=0;j<5;j++){
-		        	System.out.print(a[i][j]+" ");
-		    }
-		    System.out.println(" ");
-		}
-	} 
 	
 	
 	
